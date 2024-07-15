@@ -26,4 +26,15 @@
   width: calc(3rem * var(--scale-factor)); 
   height: auto;  
 }
+
+.toggleThemeBtn{
+  border: none;
+  background: transparent;
+}
+
+.toggleTheme {
+  color: var(--text-color);
+  width: calc(1.5rem * var(--scale-factor)); 
+  height: auto;  
+}
   

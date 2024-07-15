@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import logo from "../../assets/logo.svg";
+import Sun from "../Sun";
 
 const HeaderBar: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -32,9 +33,16 @@ const HeaderBar: React.FC = () => {
               <h5>Acerca de</h5>
             </li>
             <li>
-              <button id="theme-toggle" onClick={toggleTheme}>
-                Cambiar Tema
-              </button>
+              {isDarkTheme === true && (
+                <button className={styles.toggleThemeBtn} onClick={toggleTheme}>
+                  <Sun className={styles.toggleTheme} />
+                </button>
+              )}
+              {isDarkTheme === false && (
+                <button className={styles.toggleThemeBtn} onClick={toggleTheme}>
+                  <Sun className={styles.toggleTheme} />
+                </button>
+              )}
             </li>
           </ul>
         </nav>
