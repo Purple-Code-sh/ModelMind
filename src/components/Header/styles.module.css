@@ -1,0 +1,29 @@
+.headerNav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.headerNav ul li{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: calc(1.5rem * var(--scale-factor));
+}
+
+.headerNav ul li h5{
+  padding: 0;
+  margin: 0;
+}
+
+.headerNav ul li:first-child{
+  color: red;
+  margin-left: calc(1rem * var(--scale-factor));
+}
+  
+.logo {
+  width: calc(3rem * var(--scale-factor)); 
+  height: auto;  
+}
+  
