@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import logo from "../../assets/logo.svg";
 import Sun from "../Sun";
+import Moon from "../Moon";
 
 const HeaderBar: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -35,7 +36,7 @@ const HeaderBar: React.FC = () => {
             <li>
               {isDarkTheme === true && (
                 <button className={styles.toggleThemeBtn} onClick={toggleTheme}>
-                  <Sun className={styles.toggleTheme} />
+                  <Moon className={styles.toggleTheme} />
                 </button>
               )}
               {isDarkTheme === false && (
