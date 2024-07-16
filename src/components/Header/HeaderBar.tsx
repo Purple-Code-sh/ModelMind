@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import styles from "./styles.module.css";
-import logo from "../../assets/logo.svg";
+
+import logo from "@/assets/logo.svg";
 import Sun from "../Sun";
 import Moon from "../Moon";
+import styles from "./styles.module.css";
 
 const HeaderBar: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -16,9 +17,9 @@ const HeaderBar: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className={styles.headerDiv}>
       <header>
-        <nav className={`${styles.headerNav}`}>
+        <nav className={styles.headerNav}>
           <ul>
             <li>
               <img
@@ -36,12 +37,14 @@ const HeaderBar: React.FC = () => {
             <li>
               {isDarkTheme === true && (
                 <button className={styles.toggleThemeBtn} onClick={toggleTheme}>
-                  <Moon className={styles.toggleTheme} />
+                  <Moon
+                    className={`${styles.toggleThemeMoon} ${styles.pulse}`}
+                  />
                 </button>
               )}
               {isDarkTheme === false && (
                 <button className={styles.toggleThemeBtn} onClick={toggleTheme}>
-                  <Sun className={styles.toggleTheme} />
+                  <Sun className={styles.toggleThemeSun} />
                 </button>
               )}
             </li>

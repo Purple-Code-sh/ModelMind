@@ -1,130 +1,150 @@
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 :root {
-    --base-font-size: 14px;
-    --scale-factor: 1;
+  --base-font-size: 13px;
+  --scale-factor: 1;
   
-    /* Colores para tema claro */
-    --bg-color: #ffffff;
-    --bg-color-200: #e6e6e6;
-    --bg-color-300: #cbcbcb;
+  /* Colores para tema claro */
 
-    --text-color: #000000;
-    --text-color-200:#252525;
-    --text-color-300: #2B3033;
+  --light: 255, 255, 255;          /* #ffffff */
+  --light-200: 230, 230, 230;      /* #e6e6e6 */
+  --light-300: 203, 203, 203;      /* #cbcbcb */
+ 
+  --dark: 80, 111, 128;            /* #506F80 */
+  --dark-200: 68, 79, 85;          /* #444F55 */
+  --dark-300: 43, 48, 51;          /* #2B3033 */
 
-    --dark: #506F80;
-    --dark-200: #444F55;
-    --dark-300: #2B3033;
-    --primary : #21B1FF;
-    --primary-200: #3FA0D5;
-    --primary-300: #4F8AAA;
-    --accent : #FFA226;
-    --accent-200: #FFCD21;
+  --text-color: 0, 0, 0;           /* #000000 */
+  --text-color-200: 37, 37, 37;    /* #252525 */
+  --text-color-300: 43, 48, 51;    /* #2B3033 */
+ 
+  --primary: 33, 177, 255;         /* #21B1FF */
+  --primary-200: 63, 160, 213;     /* #3FA0D5 */
+  --primary-300: 79, 138, 170;     /* #4F8AAA */
+ 
+  --accent: 255, 162, 38;          /* #FFA226 */
+  --accent-200: 255, 205, 33;      /* #FFCD21 */
+  --accent-300: 255, 98, 38;       /* #FF6226 */
+
+  /* Background */
+
+  --bg-color: var(--light);
+  --bg-color-200: var(--light-200);
+  --bg-color-300: var(--light-300);
+
+  --bg-opacity: 0.8;
+  --blur-effect: blur(5px);
   
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
   
-    color-scheme: light dark;
+  color-scheme: light dark;
     
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
   
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.6s, color 0.6s;
-    margin: 0;
-    padding: 0;
-  }
+body {
+  background-color: rgb(var(--bg-color));
+  color: rgb(var(--text-color));
+  transition: background-color 0.6s, color 0.6s;
+  margin: 0;
+  padding: 0;
+}
   
-  body.dark-theme {
-    --bg-color: var(--dark-300);
-    --bg-color-200: var(--dark-200);
-    --bg-color-300: var(--dark);
+body.dark-theme {
+  --bg-color: var(--dark-300);
+  --bg-color-200: var(--dark-200);
+  --bg-color-300: var(--dark);
 
-    --text-color: #ffffff;
-    --text-color-200:#e6e6e6;
-    --text-color-300: #cbcbcb;
-  }
+  --text-color: var(--light);
+  --text-color-200: var(--light-200);
+  --text-color-300: var(--light-300);
+}
   
-  html {
-    font-size: var(--base-font-size);
-  }
+html {
+  font-size: var(--base-font-size);
+}
 
-  h1 {
-    color: var(--text-color);
-    font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
-    font-size: calc(1rem * var(--scale-factor) + 0.4vw);
-    margin-bottom: calc(0.15rem * var(--scale-factor));
-  }
+h1 {
+  color: rgb(var(--text-color));
+  font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.4vw);
+  margin-bottom: calc(0.15rem * var(--scale-factor));
+}
   
-  h2 {
-    color: var(--text-color);
-    font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
-    font-size: calc(1rem * var(--scale-factor) + 0.25vw);
-    margin-bottom: calc(0.1rem * var(--scale-factor));
-  }
+h2 {
+  color: rgb(var(--text-color));
+  font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.25vw);
+  margin-bottom: calc(0.1rem * var(--scale-factor));
+}
 
-  h3 {
-    color: var(--text-color);
-    font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui;
-    font-size: calc(1rem * var(--scale-factor) + 0.2vw);
-    margin-bottom: calc(0.1rem * var(--scale-factor));
-  }
+h3 {
+  color: rgb(var(--text-color));
+  font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.2vw);
+  margin-bottom: calc(0.1rem * var(--scale-factor));
+}
 
-  h4 {
-    color: var(--text-color);
-    font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
-    font-size: calc(1rem * var(--scale-factor) + 0.15vw);
-    margin-bottom: calc(0.05rem * var(--scale-factor));
-  }
+h4 {
+  color: rgb(var(--text-color));
+  font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.15vw);
+  margin-bottom: calc(0.05rem * var(--scale-factor));
+}
 
-  h5 {
-    color: var(--text-color);
-    font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
-    font-size: calc(1rem * var(--scale-factor) + 0.1vw);
-    margin-bottom: calc(0.05rem * var(--scale-factor));
-  }
+h5 {
+  color: rgb(var(--text-color));
+  font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.1vw);
+  margin-bottom: calc(0.05rem * var(--scale-factor));
+}
   
-  /* Media queries se mantienen igual */
-  @media (max-width: 1200px) {
-    :root {
-        --scale-factor: 0.95;
-    }
+/* Media queries se mantienen igual */
+@media (max-width: 1200px) {
+  :root {
+    --scale-factor: 0.95;
   }
+}
   
-  @media (max-width: 992px) {
-    :root {
-        --scale-factor: 0.9;
-    }
+@media (max-width: 992px) {
+  :root {
+    --scale-factor: 0.9;
+  }
     
-    .container {
-        width: 95vw;
-    }
+  .container {
+    width: 95vw;
+  }
+}
+  
+@media (max-width: 768px) {
+  :root {
+    --scale-factor: 0.85;
+  }
+}
+  
+@media (max-width: 480px) {
+  :root {
+    --scale-factor: 0.8;
   }
   
-  @media (max-width: 768px) {
-    :root {
-        --scale-factor: 0.85;
-    }
+  .container {
+    width: 100vw;
+    padding: 0 calc(0.5rem * var(--scale-factor));
   }
+}
   
-  @media (max-width: 480px) {
-    :root {
-        --scale-factor: 0.8;
-    }
-  
-    .container {
-        width: 100vw;
-        padding: 0 calc(0.5rem * var(--scale-factor));
-    }
+@media (min-width: 1800px) {
+  :root {
+    --scale-factor: 1.1;
   }
-  
-  @media (min-width: 1800px) {
-    :root {
-        --scale-factor: 1.1;
-    }
-  }
+}
