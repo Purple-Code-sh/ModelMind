@@ -30,10 +30,11 @@
 .toggleThemeBtn{
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 .toggleTheme {
-  color: var(--text-color);
+  color: var(--text-color-300);
   width: calc(1.5rem * var(--scale-factor)); 
   height: auto;  
 }
