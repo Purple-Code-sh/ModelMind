@@ -44,35 +44,63 @@
   width: calc(1.7rem * var(--scale-factor)); 
   height: auto;  
   color: rgb(var(--accent-300)) ;
+  filter: drop-shadow(0 0 5px rgba(var(--accent-300), 0.7)) brightness(1) saturate(1.2);
+  transition: all 0.3s ease;
+}
+
+.pulseSun{
+  animation: pulseSunFrames 5s infinite;
 }
 
 .toggleThemeSun:hover {
-  filter: drop-shadow(0 0 10px rgba(var(--primary), 1));
+  color: black;
 }
+
+@keyframes pulseSunFrames {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(var(--accent-300), 0.7)) brightness(1) saturate(2);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(var(--accent-300), 1)) brightness(1.5) saturate(3);
+  } 
+  100% {
+    filter: drop-shadow(0 0 5px rgba(var(--accent-300), 0.7)) brightness(1) saturate(2);
+  }
+}
+  
   
 .toggleThemeMoon {
   width: calc(1.6rem * var(--scale-factor)); 
   height: auto;  
   color: rgb(var(--primary)) ;
+  filter: drop-shadow(0 0 3px rgba(var(--primary), 0.7));
+  transition: all 0.3s ease;
+}
+
+.pulseMoon {
+  animation: pulseMoonFrames 5s infinite;
 }
 
 .toggleThemeMoon:hover {
-  filter: drop-shadow(0 0 10px rgba(var(--primary), 1));
+  color: white;
 }
 
-.pulse {
-  animation: pulseFrames 5s infinite;
-}
 
-@keyframes pulseFrames {
+@keyframes pulseMoonFrames {
   0% {
-    filter: drop-shadow(0 0 5px rgba(var(--primary), 0.4));
+    filter: drop-shadow(0 0 5px rgba(var(--primary-200), 0.7)) 
+            brightness(1) 
+            saturate(1.2);
   }
   50% {
-    filter: drop-shadow(0 0 15px rgba(var(--primary), 0.8));
+    filter: drop-shadow(0 0 15px rgba(var(--primary-200), 1)) 
+            brightness(1.2) 
+            saturate(1.6);
   }
   100% {
-    filter: drop-shadow(0 0 5px rgba(var(--primary), 0.4));
+    filter: drop-shadow(0 0 5px rgba(var(--primary-200), 0.7)) 
+            brightness(1) 
+            saturate(1.2);
   }
 }
   

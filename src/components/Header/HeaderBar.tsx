@@ -32,19 +32,27 @@ const HeaderBar: React.FC = () => {
               <h5>Inicio</h5>
             </li>
             <li>
-              <h5>Acerca de</h5>
+              <h5>Misión</h5>
+            </li>
+            <li>
+              <h5>Visión</h5>
+            </li>
+            <li>
+              <h5>Contacto</h5>
             </li>
             <li>
               {isDarkTheme === true && (
                 <button className={styles.toggleThemeBtn} onClick={toggleTheme}>
                   <Moon
-                    className={`${styles.toggleThemeMoon} ${styles.pulse}`}
+                    className={`${styles.toggleThemeMoon} ${styles.pulseMoon}`}
                   />
                 </button>
               )}
               {isDarkTheme === false && (
                 <button className={styles.toggleThemeBtn} onClick={toggleTheme}>
-                  <Sun className={styles.toggleThemeSun} />
+                  <Sun
+                    className={`${styles.toggleThemeSun} ${styles.pulseSun}`}
+                  />
                 </button>
               )}
             </li>
