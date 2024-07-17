@@ -4,7 +4,7 @@ import "./index.css";
 
 const App: React.FC = () => {
   return (
-    <div className="container">
+    <div>
       <HeaderBar />
     </div>
   );
