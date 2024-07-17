@@ -11,37 +11,28 @@
   padding: 0 calc(1rem * var(--scale-factor));
 }
 
-.leftContent {
-  display: flex;
-  align-items: center;
-}
-
-.rightContent {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: calc(3rem * var(--scale-factor)); 
-  height: auto;
-  margin-right: calc(2.5rem * var(--scale-factor));
-}
-
 .navLinks {
   display: flex;
   align-items: center;
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 .navLinks li {
+  display: flex;
+  align-items: center;
+  padding: 0;
   margin-right: calc(2.5rem * var(--scale-factor));
 }
 
 .navLinks li h5 {
   padding: 0;
   margin: 0;
+}
+
+.logo {
+  width: calc(3rem * var(--scale-factor)); 
+  height: auto;  
 }
 
 .toggleThemeBtn {
@@ -110,7 +101,6 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-left: calc(1rem * var(--scale-factor));
 }
 
 .hamburger span {
@@ -124,23 +114,22 @@
 @media screen and (max-width: 768px) {
   .navLinks {
     position: absolute;
-    left: -100%;
+    right: -100%;
     top: calc(3.5rem * var(--scale-factor));
     flex-direction: column;
     background-color: rgba(var(--bg-color), var(--bg-opacity));
     width: 100%;
-    text-align: left;
+    text-align: center;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
   .navLinks.open {
-    left: 0;
+    right: 0;
   }
 
   .navLinks li {
     margin: calc(1.5rem * var(--scale-factor)) 0;
-    margin-left: calc(1rem * var(--scale-factor));
   }
 
   .hamburger {
