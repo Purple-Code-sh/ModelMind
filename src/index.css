@@ -86,28 +86,28 @@ h1 {
 h2 {
   color: rgb(var(--text-color));
   font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
-  font-size: calc(1rem * var(--scale-factor) + 0.25vw);
+  font-size: calc(1rem * var(--scale-factor) + 0.3vw);
   margin-bottom: calc(0.1rem * var(--scale-factor));
 }
 
 h3 {
   color: rgb(var(--text-color));
   font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui;
-  font-size: calc(1rem * var(--scale-factor) + 0.2vw);
+  font-size: calc(1rem * var(--scale-factor) + 0.25vw);
   margin-bottom: calc(0.1rem * var(--scale-factor));
 }
 
 h4 {
   color: rgb(var(--text-color));
   font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
-  font-size: calc(1rem * var(--scale-factor) + 0.15vw);
+  font-size: calc(1rem * var(--scale-factor) + 0.2vw);
   margin-bottom: calc(0.05rem * var(--scale-factor));
 }
 
 h5 {
   color: rgb(var(--text-color));
   font-family:  Verdana, Geneva, Tahoma, sans-serif, system-ui;
-  font-size: calc(1rem * var(--scale-factor) + 0.1vw);
+  font-size: calc(1rem * var(--scale-factor) + 0.15vw);
   margin-bottom: calc(0.05rem * var(--scale-factor));
 }
   
