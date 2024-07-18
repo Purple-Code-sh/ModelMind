@@ -131,7 +131,7 @@
   .navLinks {
     display: none;
     position: absolute;
-    top: calc(3.5rem * var(--scale-factor));
+    top: calc(5rem * var(--scale-factor));
     flex-direction: column;
     width: 100%;
     background-color: rgba(var(--bg-color), var(--bg-opacity));
