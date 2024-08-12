@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Loader } from "./components/Loader";
-import { Home } from "./pages/Home";
-import { About } from "./pages/About";
-import { Contact } from "./pages/Contact";
+import { routes } from "./routes";
 import "./App.css";
 import "./index.css";
+
+const router = createBrowserRouter(routes);
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -23,21 +23,13 @@ const App: React.FC = () => {
     initApp();
   }, []);
 
-  console.log("Renderizando App, loading:", loading);
-
   return (
-    <Router>
-      <Loader loading={loading} minimumLoadTime={800}>
-        <div>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-      </Loader>
-    </Router>
+    <Loader loading={loading} minimumLoadTime={800}>
+      <div>
+        <Header />
+        <RouterProvider router={router} />
+      </div>
+    </Loader>
   );
 };
 
