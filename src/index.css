@@ -8,6 +8,13 @@
 :root {
   --base-font-size: 13px;
   --scale-factor: 1;
+
+  /* Screen size breakpoints */
+  --xs-screen: 480px;
+  --s-screen: 768px;
+  --m-screen: 992px;
+  --lg-screen: 1200px;
+  --xl-screen: 1800px;
   
   /* Colores para tema claro */
 
@@ -112,29 +119,7 @@ h5 {
 }
   
 /* Media queries se mantienen igual */
-@media (max-width: 1200px) {
-  :root {
-    --scale-factor: 0.95;
-  }
-}
-  
-@media (max-width: 992px) {
-  :root {
-    --scale-factor: 0.9;
-  }
-    
-  .container {
-    width: 95vw;
-  }
-}
-  
-@media (max-width: 768px) {
-  :root {
-    --scale-factor: 0.85;
-  }
-}
-  
-@media (max-width: 480px) {
+@media (max-width: var(--xs-screen)) {
   :root {
     --scale-factor: 0.8;
   }
@@ -144,8 +129,31 @@ h5 {
     padding: 0 calc(0.5rem * var(--scale-factor));
   }
 }
+
+@media (max-width: var(--s-screen)) {
+  :root {
+    --scale-factor: 0.85;
+  }
+}
+
+@media (max-width: var(--m-screen)) {
+  :root {
+    --scale-factor: 0.9;
+  }
   
-@media (min-width: 1800px) {
+  .container {
+    width: 95vw;
+  }
+}
+
+@media (max-width: var(--lg-screen)) {
+  :root {
+    --scale-factor: 0.95;
+  }
+}
+  
+  
+@media (min-width: var(--xl-screen)) {
   :root {
     --scale-factor: 1.1;
   }
