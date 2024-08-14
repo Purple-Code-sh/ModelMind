@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 import { Loader } from "./components/Loader";
 import { routes } from "./routes";
 import "./App.css";
@@ -28,6 +29,7 @@ const App: React.FC = () => {
       <div>
         <Header />
         <RouterProvider router={router} />
+        <Footer />
       </div>
     </Loader>
   );
