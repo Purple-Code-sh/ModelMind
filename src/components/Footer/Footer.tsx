@@ -1,18 +1,20 @@
 import React from "react";
 import "./styles.css";
+import moduleStyles from "./footer.module.css"
 
 // Import images
 import logoSvg from "../../assets/logo.svg";
-import instagramSvg from "../../assets/instagram.svg";
-import linkedinSvg from "../../assets/linkedin.svg";
-import twitterSvg from "../../assets/twitter.svg";
+import GithubIcon from '../svg/GithubIcon'
+import InstagramIcon from '../svg/InstagramIcon'
+import LinkedInIcon from '../svg/LinkedInIcon'
 
 const Footer: React.FC = () => {
-  const socialLinks = [
-    { name: "Instagram", icon: instagramSvg },
-    { name: "Linkedin", icon: linkedinSvg },
-    { name: "Twitter", icon: twitterSvg },
-  ];
+
+  const socialLinks2 = [
+    { name: "Github", link: "#", icon: <GithubIcon className={`${moduleStyles.iconColor}`}/> },
+    { name: "Instagram", link: "#", icon: <InstagramIcon className={`${moduleStyles.iconColor}`}/> },
+    { name: "Linkedin", link: "#", icon: <LinkedInIcon className={`${moduleStyles.iconColor}`}/> },
+  ]
 
   return (
     <footer>
@@ -86,10 +88,10 @@ const Footer: React.FC = () => {
         <div className="social-bottom">
           <div className="social-links">
             <ul>
-              {socialLinks.map((item) => (
+              {socialLinks2.map((item) => (
                 <li key={item.name}>
-                  <a href="#" title={item.name}>
-                    <img src={item.icon} alt={item.name} />
+                  <a href={item.link} title={item.name}>
+                    {item.icon}
                   </a>
                 </li>
               ))}
