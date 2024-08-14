@@ -7,6 +7,8 @@ import logoSvg from "../../assets/logo.svg";
 import GithubIcon from '../svg/GithubIcon'
 import InstagramIcon from '../svg/InstagramIcon'
 import LinkedInIcon from '../svg/LinkedInIcon'
+import TwitterIcon from '../svg/TwitterIcon'
+import YouTubeIcon from '../svg/YouTubeIcon'
 
 const Footer: React.FC = () => {
 
@@ -14,6 +16,8 @@ const Footer: React.FC = () => {
     { name: "Github", link: "#", icon: <GithubIcon className={`${moduleStyles.iconColor}`}/> },
     { name: "Instagram", link: "#", icon: <InstagramIcon className={`${moduleStyles.iconColor}`}/> },
     { name: "Linkedin", link: "#", icon: <LinkedInIcon className={`${moduleStyles.iconColor}`}/> },
+    { name: "Twitter", link: "#", icon: <TwitterIcon className={`${moduleStyles.iconColor}`}/> },
+    { name: "Youtube", link: "#", icon: <YouTubeIcon className={`${moduleStyles.iconColor}`}/> },
   ]
 
   return (
