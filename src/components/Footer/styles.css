@@ -1,7 +1,6 @@
 /*? footer containers */
 footer {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; bottom: 0; */
     background: rgb(var(--bg-color-300));
     width: 100%;
     display: flex;
@@ -49,7 +48,7 @@ footer {
     outline: none;
     border: none;
     outline: 2px solid rgb(var(--accent));
-    min-height: calc(2.25rem * var(--scale-factor));
+    /* min-height: calc(2.25rem * var(--scale-factor)); */
     background: rgb(var(--bg-color-200));
     flex: 1 0 120px;
     padding: calc(1rem * var(--scale-factor)) calc(0.75rem * var(--scale-factor));
@@ -71,7 +70,7 @@ footer {
     border-radius: 99rem;
     color: rgb(var(--dark-300));
     min-width: calc(8rem * var(--scale-factor));
-    min-height: calc(2.25rem * var(--scale-factor));
+    /* min-height: calc(2.25rem * var(--scale-factor)); */
     flex: 1 0 calc(4rem * var(--scale-factor));
     white-space: nowrap;
     font-weight: bold;
@@ -147,7 +146,7 @@ footer {
     align-items: center;
     width: 100%;
     background: rgb(var(--primary));
-    min-height: calc(3.5rem * var(--scale-factor));
+    /* min-height: calc(3.5rem * var(--scale-factor)); */
     color: rgb(var(--dark-300));
     font-size: calc(1.35rem * var(--scale-factor));
 }

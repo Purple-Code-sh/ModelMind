@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "@/assets/logo.svg";
-import Sun from "../Sun";
-import Moon from "../Moon";
+import Sun from "../svg/Sun";
+import Moon from "../svg/Moon";
 import styles from "./styles.module.css";
 
 const HeaderBar: React.FC = () => {
