@@ -1,7 +1,3 @@
-import React from "react";
-import "./styles.css";
-import moduleStyles from "./footer.module.css"
-
 // Import images
 import logoSvg from "../../assets/logo.svg";
 import GithubIcon from '../svg/GithubIcon'
@@ -10,33 +6,35 @@ import LinkedInIcon from '../svg/LinkedInIcon'
 import TwitterIcon from '../svg/TwitterIcon'
 import YouTubeIcon from '../svg/YouTubeIcon'
 
+import styles from "./styles.module.css"
+
 const Footer: React.FC = () => {
 
   const socialLinks2 = [
-    { name: "Github", link: "#", icon: <GithubIcon className={`${moduleStyles.iconColor}`}/> },
-    { name: "Instagram", link: "#", icon: <InstagramIcon className={`${moduleStyles.iconColor}`}/> },
-    { name: "Linkedin", link: "#", icon: <LinkedInIcon className={`${moduleStyles.iconColor}`}/> },
-    { name: "Twitter", link: "#", icon: <TwitterIcon className={`${moduleStyles.iconColor}`}/> },
-    { name: "Youtube", link: "#", icon: <YouTubeIcon className={`${moduleStyles.iconColor}`}/> },
+    { name: "Github", link: "#", icon: <GithubIcon className={`${styles.social_link_icon}`}/> },
+    { name: "Instagram", link: "#", icon: <InstagramIcon className={`${styles.social_link_icon}`}/> },
+    { name: "Linkedin", link: "#", icon: <LinkedInIcon className={`${styles.social_link_icon}`}/> },
+    { name: "Twitter", link: "#", icon: <TwitterIcon className={`${styles.social_link_icon}`}/> },
+    { name: "Youtube", link: "#", icon: <YouTubeIcon className={`${styles.social_link_icon}`}/> },
   ]
-
+  
   return (
-    <footer>
-      <div className="footer-wrapper">
-        <section className="footer-top">
-          <div className="footer-headline">
+    <footer className={styles.footer}>
+      <div className={styles.footer_wrapper}>
+        <section className={styles.footer_top}>
+          <div className={styles.footer_headline}>
             <h2>Subscribe to our newsletter</h2>
             <p>Stay up to date with our news and articles</p>
           </div>
-          <div className="footer-subscribe">
+          <div className={styles.footer_subscribe}>
             <input type="email" spellCheck={false} placeholder="Your Email" />
             <button>Sign Up</button>
           </div>
         </section>
-        <div className="footer-columns">
-          <section className="footer-logo">
+        <div className={styles.footer_columns}>
+          <section className={styles.footer_logo}>
             <h2>
-              <img src={logoSvg} alt="Maxwell Technologies" />
+              <img src={logoSvg} alt="ModelMind Technologies" />
             </h2>
           </section>
           <section>
@@ -46,7 +44,7 @@ const Footer: React.FC = () => {
                 "Support",
                 "Sitemap",
                 "Newsletter",
-                "Help Centre",
+                "Help Center",
                 "Investor",
               ].map((item) => (
                 <li key={item}>
@@ -89,8 +87,8 @@ const Footer: React.FC = () => {
             </ul>
           </section>
         </div>
-        <div className="social-bottom">
-          <div className="social-links">
+        <div className={styles.social_bottom}>
+          <div className={styles.social_links}>
             <ul>
               {socialLinks2.map((item) => (
                 <li key={item.name}>
@@ -103,10 +101,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
-        <div className="footer-bottom-wrapper">
+      <div className={styles.footer_bottom}>
+        <div className={styles.footer_bottom_wrapper}>
           <small>
-            © Maxwell Technologies, Inc. {new Date().getFullYear()}, All rights
+            © ModelMind {new Date().getFullYear()}, All rights
             reserved
           </small>
         </div>

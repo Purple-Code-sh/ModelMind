@@ -1,5 +1,0 @@
-.iconColor {
-    color: rgb(var(--text-color));
-    min-width: calc(2rem * var(--scale-factor));
-    min-height: calc(2rem * var(--scale-factor));
-}
