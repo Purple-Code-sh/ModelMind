@@ -1,24 +1,27 @@
+/* eslint-disable react-refresh/only-export-components */
+import React from 'react';
 import { RouteObject } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import {Mission} from "./pages/Mission";
-import {Vision} from "./pages/Vision";
-import Contact from "./pages/Contact/Contact";
+
+const Home = React.lazy(() => import("./pages/Home/Home"));
+const Mission = React.lazy(() => import("./pages/Mission/Mission"));
+const Vision = React.lazy(() => import("./pages/Vision/Vision"));
+const Contact = React.lazy(() => import("./pages/Contact/Contact"));
 
 export const routes: RouteObject[] = [
   {
     path: "/",
-    element: <Home />,
+    element: <React.Suspense fallback={<div>Loading...</div>}><Home /></React.Suspense>,
   },
   {
     path: "/mission",
-    element: <Mission />,
+    element: <React.Suspense fallback={<div>Loading...</div>}><Mission /></React.Suspense>,
   },
   {
     path: "/vision",
-    element: <Vision />,
+    element: <React.Suspense fallback={<div>Loading...</div>}><Vision /></React.Suspense>,
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: <React.Suspense fallback={<div>Loading...</div>}><Contact /></React.Suspense>,
   },
 ];

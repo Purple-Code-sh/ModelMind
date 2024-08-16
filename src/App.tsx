@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -10,7 +10,9 @@ import "./index.css";
 const Layout = () => (
   <>
     <Header />
-    <Outlet />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Outlet />
+    </Suspense>
     <Footer />
   </>
 );
