@@ -94,6 +94,8 @@ body {
   background-color: rgb(var(--bg-color));
   color: rgb(var(--text-color));
   transition: background-color var(--slow-transition), color var(--slow-transition);
+  width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 
