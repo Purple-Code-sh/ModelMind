@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 import Sun from "../svg/Sun";
 import Moon from "../svg/Moon";
@@ -30,16 +31,24 @@ const HeaderBar: React.FC = () => {
               className={`${styles.navLinks} ${isMenuOpen ? styles.open : ""}`}
             >
               <li>
-                <h5>Inicio</h5>
+                <Link to="/">
+                  <h5>Inicio</h5>
+                </Link>
               </li>
               <li>
-                <h5>Misión</h5>
+                <Link to="/mission">
+                  <h5>Misión</h5>
+                </Link>
               </li>
               <li>
-                <h5>Visión</h5>
+                <Link to="/vision">
+                  <h5>Visión</h5>
+                </Link>
               </li>
               <li>
-                <h5>Contacto</h5>
+                <Link to="/contact">
+                  <h5>Contacto</h5>
+                </Link>
               </li>
             </ul>
           </div>
